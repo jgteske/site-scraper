@@ -1,0 +1,23 @@
+{
+  "name": "webscraper-cheerio",
+  "version": "1.0.0",
+  "description": "Test webscraper with cheerio",
+  "main": "src/app.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^22.9.0",
+    "axios": "^1.7.7",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./bin/app.js",
+    "dev": "ts-node ./src/app.ts",
+    "scrape": "yarn build && node ./bin/app.js"
+  }
+}
