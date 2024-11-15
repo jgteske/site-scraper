@@ -2,7 +2,7 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { ScrapeData } from '../models/scrapeSite';
 
-export async function cheerioScrapeSite(url: string) {
+export async function cheerioScrapeSite(url: string): Promise<ScrapeData[]> {
   const data = await axios.get(url);
   const page = data.data;
   const $ = cheerio.load(page);
